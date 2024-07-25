@@ -6,9 +6,11 @@ require("dotenv").config();
 
 const addJob= async(req,res)=>{
 
+    
+
 
     const imageUrls = req.files.map(file => `http://10.0.0.175:5000/${file.path}`);//change when you get a domain
-
+    
     const job = new Job({
     jobtitle:req.body.jobtitle,
     clientid:req.body.clientid,
@@ -47,10 +49,20 @@ const getAllJobs= (req,res)=>{
    
 )
 }
-const getJob= (req,res)=>{
+const getJobdetails= (req,res)=>{
     const id = req.params.id;
+  
 
     Job.findById(id).
+        then(result=>{
+            res.send(result);
+        }).catch(err=>console.log(err));
+}
+const getJob= (req,res)=>{
+    const id = req.params.id;
+  
+
+    Job.find({'client_id':id}).
         then(result=>{
             res.send(result);
         }).catch(err=>console.log(err));
@@ -71,7 +83,7 @@ const deleteJob= async(req,res)=>{
 
 }
 const updatecompleteJob=async(req,res)=>{
-    console.log(req.body)
+   
   
     const imageUrls = req.files.map(file => `http://10.0.0.175:5000/${file.path}`);
    
@@ -124,4 +136,4 @@ const updateJob=async(req,res)=>{
 
 
 
-module.exports=({updateJob,deleteJob,addJob,getAllJobs,getJob,updatecompleteJob})
+module.exports=({updateJob,deleteJob,addJob,getAllJobs,getJob,updatecompleteJob,getJobdetails})
