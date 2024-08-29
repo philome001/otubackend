@@ -26,6 +26,66 @@
 
 -------------------------------------------------
 */
+//REQUEST QUOTE
+//APPOINTMENT
+.appointment-form{
+	width: 100%;
+	.form-group{
+		position: relative;
+		width: 100%;
+		display: block;
+		.icon {
+			position: absolute;
+			top: 50% !important;
+			right: 15px;
+			font-size: 16px;
+			transform: translateY(-50%);
+			span{
+				color: rgba(0,0,0,.2) !important;
+			}
+		}
+		.select-wrap, .input-wrap {
+			position: relative;
+			select {
+				appearance: none;
+			}
+		}
+		.btn{
+			width: 100%;
+			display: block !important;
+		}
+	}
+	.form-control {
+		border: none !important;
+		height: 54px!important;
+		padding-left: 15px;
+		padding-right: 15px; 
+		background: rgba(0,0,0,.05)!important;
+		color: rgba(0,0,0,.5)!important;
+		font-size: 16px;
+		font-weight: 500;
+		border-radius: 5px;
+		box-shadow: none!important;
+		&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		  color: rgba(0,0,0,.5);
+		}
+		&::-moz-placeholder { /* Firefox 19+ */
+		  color: rgba(0,0,0,.5);
+		}
+		&:-ms-input-placeholder { /* IE 10+ */
+		  color: rgba(0,0,0,.5);
+		}
+		&:-moz-placeholder { /* Firefox 18- */
+		  color: rgba(0,0,0,.5);
+		}
+		&:focus, &:active {
+			border-color: $white;
+		}
+	}
+	textarea.form-control {
+		height: inherit!important;
+	}
+}
 
 // Defult
 	@import 'variables';
@@ -62,3 +122,62 @@
 	@import 'bradcam';
 	@import 'extend';
 	@import 'elements';
+
+.appointment-form{
+	width: 100%;
+	.form-group{
+		position: relative;
+		width: 100%;
+		display: block;
+		.icon {
+			position: absolute;
+			top: 50% !important;
+			right: 15px;
+			font-size: 16px;
+			transform: translateY(-50%);
+			span{
+				color: rgba(0,0,0,.2) !important;
+			}
+		}
+		.select-wrap, .input-wrap {
+			position: relative;
+			select {
+				appearance: none;
+			}
+		}
+		.btn{
+			width: 100%;
+			display: block !important;
+		}
+	}
+	.form-control {
+		border: none !important;
+		height: 54px!important;
+		padding-left: 15px;
+		padding-right: 15px; 
+		background: rgba(0,0,0,.05)!important;
+		color: rgba(0,0,0,.5)!important;
+		font-size: 16px;
+		font-weight: 500;
+		border-radius: 5px;
+		box-shadow: none!important;
+		&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		  color: rgba(0,0,0,.5);
+		}
+		&::-moz-placeholder { /* Firefox 19+ */
+		  color: rgba(0,0,0,.5);
+		}
+		&:-ms-input-placeholder { /* IE 10+ */
+		  color: rgba(0,0,0,.5);
+		}
+		&:-moz-placeholder { /* Firefox 18- */
+		  color: rgba(0,0,0,.5);
+		}
+		&:focus, &:active {
+			border-color: $white;
+		}
+	}
+	textarea.form-control {
+		height: inherit!important;
+	}
+}

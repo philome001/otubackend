@@ -62,7 +62,7 @@ const getJob= (req,res)=>{
     const id = req.params.id;
   
 
-    Job.find({'client_id':id}).
+    Job.find({'clientid':id}).
         then(result=>{
             res.send(result);
         }).catch(err=>console.log(err));
